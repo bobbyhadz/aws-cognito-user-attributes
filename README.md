@@ -1,8 +1,9 @@
 # Add custom / default User Pool Attributes to Cognito using AWS CDK
 
-A repository for an article on [bobbyhadz.com](https://bobbyhadz.com) that shows
-how to use CDK to provision `custom` and `default` User Pool attributes for
-Cognito.
+A repository for an article on
+[bobbyhadz.com](https://bobbyhadz.com/blog/aws-cognito-user-attributes) that
+shows how to use CDK to provision `custom` and `default` User Pool attributes
+for Cognito.
 
 ## How to Use
 
