@@ -1,0 +1,75 @@
+{
+  "scripts": {
+    "setup": "npm install",
+    "cdk-bootstrap": "cdk bootstrap",
+    "cdk-synth": "cdk synth cognito-user-attributes-dev",
+    "cdk-deploy": "cdk deploy cognito-user-attributes-dev --outputs-file ./cdk-exports-dev.json",
+    "cdk-create-stack": "npm run cdk-bootstrap && npm run cdk-deploy",
+    "cdk-destroy": "cdk destroy cognito-user-attributes-dev",
+    "test": "jest",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "eslint . --ext js,jsx,ts,tsx --fix"
+  },
+  "dependencies": {
+    "@aws-cdk/assert": "1.92.0",
+    "@aws-cdk/aws-cognito": "1.92.0",
+    "@aws-cdk/aws-iam": "1.92.0",
+    "@aws-cdk/aws-logs": "1.92.0",
+    "@aws-cdk/core": "1.92.0",
+    "aws-cdk": "1.92.0",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "esbuild": "^0.8.34",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^5.0.9",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run type-check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint"
+    ],
+    "*.{html,js,json,md,yml,yaml,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "name": "cognito-user-attributes",
+  "version": "1.0.0",
+  "keywords": [
+    "aws",
+    "cdk",
+    "typescript",
+    "cognito"
+  ],
+  "tags": [
+    "aws",
+    "cdk",
+    "typescript",
+    "cognito"
+  ],
+  "author": "Borislav Hadzhiev",
+  "license": "MIT",
+  "private": true
+}
