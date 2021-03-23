@@ -6,16 +6,23 @@ Cognito.
 
 ## How to Use
 
-TODO: write commands here
+1. Clone the repository
 
-- `npm run setup` - installs the dependencies in both the `cdk/` and the `src/`
-  directories
-- `npm run synth:dev` - synths the `next-cognito-dev` stack and spits out a
-  `template.yaml` file in the root directory, which is the cloudformation
-  representation of the CDK code
-- `npm run deploy:dev` - deploys the `next-cognito-dev` stack to cloudformation
-  and outputs the `cdk-exports-dev.json` file, which contains the outputs
-  specified in the CDK code, to then be used in the frontend - i.e. the
-  `api url`.
-- `npm run synth:prod` and `npm run deploy:prod` - same as above but for the
-  `next-cognito-prod` stack.
+```bash
+git clone git@github.com:bobbyhadz/aws-cognito-user-attributes.git && cd aws-cognito-user-attributes
+```
+
+2. Install the dependencies (Make sure your global cdk --version matches the one
+   in package.json)
+
+```bash
+npm install
+```
+
+3. Create the cognito stack
+
+```bash
+npm run cdk-create-stack
+```
+
+4. Open the AWS Console and the stack should be created in your default region
