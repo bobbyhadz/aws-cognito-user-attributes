@@ -1,11 +1,11 @@
 {
   "scripts": {
     "setup": "npm install",
-    "cdk-bootstrap": "cdk bootstrap",
-    "cdk-synth": "cdk synth cognito-user-attributes-dev",
-    "cdk-deploy": "cdk deploy cognito-user-attributes-dev --outputs-file ./cdk-exports-dev.json",
+    "cdk-bootstrap": "npx cdk bootstrap",
+    "cdk-synth": "npx cdk synth cognito-user-attributes-dev",
+    "cdk-deploy": "npx cdk deploy cognito-user-attributes-dev --outputs-file ./cdk-exports-dev.json",
     "cdk-create-stack": "npm run cdk-bootstrap && npm run cdk-deploy",
-    "cdk-destroy": "cdk destroy cognito-user-attributes-dev",
+    "cdk-destroy": "npx cdk destroy cognito-user-attributes-dev",
     "test": "jest",
     "watch": "tsc -w",
     "build": "tsc",

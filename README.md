@@ -13,8 +13,7 @@ for Cognito.
 git clone git@github.com:bobbyhadz/aws-cognito-user-attributes.git && cd aws-cognito-user-attributes
 ```
 
-2. Install the dependencies (Make sure your global cdk --version matches the one
-   in package.json)
+2. Install the dependencies
 
 ```bash
 npm install
