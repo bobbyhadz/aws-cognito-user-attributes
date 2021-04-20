@@ -9,10 +9,6 @@ for Cognito.
 
 1. Clone the repository
 
-```bash
-git clone git@github.com:bobbyhadz/aws-cognito-user-attributes.git && cd aws-cognito-user-attributes
-```
-
 2. Install the dependencies
 
 ```bash
