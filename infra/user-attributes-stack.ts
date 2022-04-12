@@ -1,9 +1,10 @@
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+
 import {UserPoolClientConstruct} from './constructs/user-pool-client-construct';
 import {UserPoolConstruct} from './constructs/user-pool-construct';
 
 export class UserAttributesStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const {userPool} = new UserPoolConstruct(this, 'userpool');

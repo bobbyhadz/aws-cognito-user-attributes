@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import * as cdk from '@aws-cdk/core';
 import 'source-map-support/register';
+import * as cdk from 'aws-cdk-lib';
+
 import {DEPLOY_ENVIRONMENT, DEPLOY_REGION, STACK_PREFIX} from './constants';
 import {UserAttributesStack} from './user-attributes-stack';
 

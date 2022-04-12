@@ -1,11 +1,13 @@
-import * as cognito from '@aws-cdk/aws-cognito';
-import * as cdk from '@aws-cdk/core';
+import {Construct} from 'constructs';
+import * as cdk from 'aws-cdk-lib';
+import * as cognito from 'aws-cdk-lib/aws-cognito';
+
 import {DEPLOY_ENVIRONMENT, STACK_PREFIX} from '../constants';
 
-export class UserPoolConstruct extends cdk.Construct {
+export class UserPoolConstruct extends Construct {
   public readonly userPool: cognito.UserPool;
 
-  constructor(scope: cdk.Construct, id: string) {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     this.userPool = new cognito.UserPool(this, 'userpool', {
